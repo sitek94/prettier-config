@@ -38,7 +38,3 @@ jobs:
         run: git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        retry:
-          attempts: 3
-          wait: 10
-          message: 'Failed to push to github'
