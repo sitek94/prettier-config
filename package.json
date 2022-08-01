@@ -1,0 +1,12 @@
+{
+  "name": "@sitek94/prettier-config",
+  "version": "1.0.0",
+  "description": "Maciek's Prettier config",
+  "main": "index.json",
+  "author": "Maciek Sitkowski <msitkowski94@gmail.com> (https://github.com/sitek94)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitek94/prettier-config.git"
+  }
+}
