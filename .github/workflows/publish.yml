@@ -1,14 +1,18 @@
 name: Publish
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.json'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: ⬇️ Checkout repo
+      - name: 📥 Checkout repo
         uses: actions/checkout@v3
 
       - name: ⎔ Setup node
@@ -16,6 +20,9 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
+
+      - name: ⬆️ Bump version
+        run: npm version patch
 
       - name: 🤩 Publish
         run: npm publish
